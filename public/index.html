@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PROJECT X</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Modal Popup -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🪀 Welcome X LITE BOT</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <p>Before connecting, please consider starring and forking our GitHub repository to proceed!</p>
+        <div class="modal-buttons">
+          <a href="https://github." target="_blank" class="btn modal-btn">
+            <i class="fab fa-github"></i> Star & Fork Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-name">x ʟɪᴛᴇ</div>
+        <div class="brand-subtitle">WhatsApp Bot</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#features"><i class="fas fa-star"></i> Features</a>
+      <a href="#connect"><i class="fas fa-link"></i> Connect</a>
+      <a href="#links"><i class="fas fa-external-link-alt"></i> Links</a>
+    </div>
+    <button class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>🤖 x ʟɪᴛᴇ 🤖</h1>
+      <p class="hero-description">A modern WhatsApp bot with powerful features, Made by <strong>Akindu Dimansha</strong>.</p>
+
+      <!-- Stats Container -->
+      <div class="stats-container">
+        <div class="stat-card active">
+          <div class="stat-icon">
+            <i class="fas fa-signal"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="activeSockets">0</div>
+            <div class="stat-label">Active Sockets</div>
+          </div>
+        </div>
+
+        <div class="stat-card total">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="totalUsers">0</div>
+            <div class="stat-label">Total Users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="features" class="card feature-section">
+      <div class="section-header">
+        <h2><i class="fas fa-star"></i> Features</h2>
+        <p class="section-subtitle">Discover what makes X BOT Special ⚙️</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-reply"></i>
+          </div>
+          <h3>Auto Replies</h3>
+          <p>Smart automated responses to messages based on customizable triggers.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h3>Media Tools</h3>
+          <p>Download, convert, and manage media files with ease.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3>Commands System</h3>
+          <p>Extend functionality with custom Commands and scripts.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Security</h3>
+          <p>Built-in security features to protect your privacy and data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="card connect-section">
+      <div class="section-header">
+        <h2><i class="fas fa-link"></i> Connect to WhatsApp</h2>
+        <p class="section-subtitle">Get started in just a few steps</p>
+      </div>
+      
+      <div class="instructions">
+        <h3>How to connect:</h3>
+        <ol class="steps-list">
+          <li>Enter your WhatsApp number with country code (no "+", no brackets, no spaces)</li>
+          <li>Click "Request Pairing Code"</li>
+          <li>Copy the 8-digit code</li>
+          <li>Open WhatsApp → Settings → Linked Devices → Link a Device</li>
+          <li>Paste the code when prompted</li>
+        </ol>
+      </div>
+
+      <div class="connection-form">
+        <div class="input-box">
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" placeholder="EG 94760000000" />
+          </div>
+          <button class="btn primary-btn" id="requestPairing">
+            <i class="fas fa-key"></i> Request Pairing Code
+          </button>
+        </div>
+        
+        <div id="status" class="status-message"></div>
+      </div>
+    </section>
+
+    <section id="links" class="card links-section">
+      <div class="section-header">
+        <h2><i class="fas fa-external-link-alt"></i> Links</h2>
+        <p class="section-subtitle">Explore more about suho-lite</p>
+      </div>
+      <div class="link-grid">
+        <a class="btn primary-btn" href="https://github.com/NaCkS-ai/Sung-Suho-MD" target="_blank">
+          <i class="fab fa-github"></i> GitHub Repository
+        </a>
+        <a class="btn secondary-btn" href="https://whatsapp.com/channel/" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Channel
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> x ʟɪᴛᴇ ʙᴏᴛ</p>
+    </div>
+  </footer>
+
+  <!-- socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- frontend logic -->
+  <script src="scripts.js"></script>
+  
+</body>
+</html>
